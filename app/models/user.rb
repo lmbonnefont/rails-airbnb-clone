@@ -5,8 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :products, dependent: :destroy
-  validates :email, uniqueness: true, presence: true
-  validates :encrypted_password, presence: true
-  validates :surname, presence: true
-  validates :name, presence: true
 end
