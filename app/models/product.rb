@@ -3,5 +3,5 @@ class Product < ApplicationRecord
   validates :price, presence: true, numericality: { greater_than_or_equal: 0 }
   validates :description, presence: true
   validates :photo, presence: true
-  validates :location, presence: true
+  validates :address, presence: true
 end
