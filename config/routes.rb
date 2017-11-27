@@ -3,7 +3,8 @@ resources :users do
   resources :products, only: [ :new, :create ]
 end
 
-get 'products', to: 'products#index', as: :about
+get 'products', to: 'products#index', as: :displayallproducts
+get 'products/:id', to: 'products#show', as: :showproduct
 
   devise_for :users
   root to: 'pages#home'
