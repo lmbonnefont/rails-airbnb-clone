@@ -1,8 +1,13 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:new, :create]
+
   def new
+    @product = Product.new
   end
 
   def create
+    @product = Product.new(product_params)
+    @product
   end
 
   def index
@@ -21,4 +26,11 @@ class ProductsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def set_product
+    @product = Product.find(params[:user_id])
+  end
+
 end
