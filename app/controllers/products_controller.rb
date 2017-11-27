@@ -1,6 +1,14 @@
 class ProductsController < ApplicationController
   before_action :set_user, only: [:new, :create]
 
+  def index
+    @products = Product.all
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
   def new
     @product = Product.new
   end
@@ -8,14 +16,11 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(user_params)
     @product.user = @user
-  end
-
-  def index
-    @products = Product.all
-  end
-
-  def show
-    @product = Product.find(params[:id])
+    if @product.save
+      redirect_to product_path(@product)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -25,6 +30,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    @product.delete
   end
 
   private
