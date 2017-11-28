@@ -17,6 +17,10 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'faker'
 
+gem 'devise'
+gem 'pundit'
+
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -26,5 +30,3 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'devise'
-gem 'pundit'
