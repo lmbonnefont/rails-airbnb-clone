@@ -1,34 +1,19 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.jpg" alt="Happy failing">
-  </a>
+  <%= image_tag "logo.jpg", id: "logo", width: 50 %>
 
-  <!-- Search bar -->
-<!--   <form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Chercher un produit">
-    </div>
-    <button type="submit" class="btn btn-default">Go</button>
-  </form> -->
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Buy</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sell</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
+    <%= link_to "Sell", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Messages", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Sign-in", new_user_session_path, class: "btn btn-primary espacement-composants" %>
+    <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-success espacement-composants" %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning espacement-composants" %>
+
+    <i class="fa fa-shopping-cart"></i>
+
   </div>
 
   <!-- Dropdown appearing on mobile only -->
@@ -39,6 +24,8 @@
         <li><a href="#">Buy</a></li>
         <li><a href="#">Sell</a></li>
         <li><a href="#">Messages</a></li>
+        <li><a href="#">Sign-in</a></li>
+        <li><a href="#">Sign-up</a></li>
       </ul>
     </div>
   </div>
