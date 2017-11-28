@@ -4,7 +4,7 @@
   <li>Price: <%= @product.price %></li>
   <li>Description: <%= @product.description %></li>
   <li>Address: <%= @product.address %></li>
-  <li>Photo: <%= @product.photo %></li>
+  <li>Photo: <%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %></li>
   <li>Availability: <%= @product.availability ? "Ok" : "Nope" %></li>
 </ul>
 
