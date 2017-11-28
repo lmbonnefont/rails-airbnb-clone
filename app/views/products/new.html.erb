@@ -1,2 +1,7 @@
-<h1>Products#new</h1>
+<h1>Products#new (form ready to be completed !!)</h1>
 <p>Find me in app/views/products/new.html.erb</p>
+
+<%= simple_form_for [@user, @product] do |f| %>
+  <%= f.input :description %>
+  <%= f.submit "Add a product", class: "btn btn-primary" %>
+<% end %>
