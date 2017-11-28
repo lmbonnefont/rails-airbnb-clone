@@ -6,11 +6,7 @@
   <li><%= @user.email %> <%=  %></li>
 </ul>
 
-<%= link_to "Delete", destroy_user_session_path, method: :delete, data: { confirm: "You sure?" } %>
-
-<% if current_user %>
-  <% @user.destroy %>
-<% end %>
+<%= link_to 'Cancel my account', users_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
 
 <h3>Order History</h3>
 <p>(Display basket)</p>
