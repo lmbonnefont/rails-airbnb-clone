@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :set_user, only: [:new, :create]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -15,7 +14,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.user = @user
+    @product.user = current_user
     if @product.save
       redirect_to product_path(@product)
     else
@@ -33,13 +32,10 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.delete
+    redirect_to products_path
   end
 
   private
-
-  def set_user
-    @user = User.find(params[:user_id])
-  end
 
   def set_product
     @product = Product.find(params[:id])
