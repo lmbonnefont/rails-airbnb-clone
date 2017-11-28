@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.marketing {
+  width: 100%;
+
+}
+
+.featurette {
+  padding: 20px 20px 20px 20px;
+}
+
+.featurette-failers {
+  background-color: white;
+  h1{
+    color: $blue;
+    font-weight: bold;
+  }
+}
+
+.featurette-divider {
+  background-color: white;
+}
+
+.featurette-helpers{
+  background-color: #fff5ed;
+  h1{
+
+    font-weight: bold;
+  }
+}
