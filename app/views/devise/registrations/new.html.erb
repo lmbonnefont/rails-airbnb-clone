@@ -4,11 +4,46 @@
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
       <div class="group-form">
         <div class="group-form-body-no-header">
-          <div class="form-inputs">
-            <%= f.input :email, required: true, autofocus: true %>
-            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-            <%= f.input :password_confirmation, required: true %>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                  <a class="social-btn" href="/users/auth/facebook">Sign in with Facebook</a>
+
+              <div class="text-stripped">
+                <hr>
+                <p>Or sign-up with your email</p>
+              </div>
+
+              <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="CohqftG4o1zEvo42qBZIt3qlYyU3ZTwYmlRbKaO+/HoifnVTa3w18IpiLAuIL8/RAZ3mJ4q6hGaLzh7GD/9YkA==">
+
+
+                <div class="form-inputs">
+                  <label class="string required sr-only" for="user_first_name"><abbr title="required">*</abbr> First name</label>
+                  <input required="required" autofocus="autofocus" class="string required form-control group-input" aria-required="true" placeholder="First Name" type="text" name="user[first_name]" id="user_first_name">
+                  <label class="string required sr-only" for="user_last_name"><abbr title="required">*</abbr> Last name</label>
+                  <input required="required" autofocus="autofocus" class="string required form-control group-input" aria-required="true" placeholder="Last Name" type="text" name="user[last_name]" id="user_last_name">
+                  <label class="email optional sr-only" for="user_email">Email</label>
+                  <input required="required" autofocus="autofocus" class="string email required form-control group-input" aria-required="true" placeholder="Email" type="email" value="" name="user[email]" id="user_email">
+                  <label class="password optional sr-only" for="user_password">Password</label>
+                  <input required="required" hint="6 characters minimum" class="password required form-control group-input" aria-required="true" placeholder="Password" type="password" name="user[password]" id="user_password">
+                  <label class="password optional sr-only" for="user_password_confirmation">Password confirmation</label>
+                  <input required="required" class="password required form-control cesta-input" aria-required="true" placeholder="Confirm your password" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+
+                <div class="form-actions">
+                  <input type="submit" name="commit" value="Sign up" class="btn btn-primary btn-main-login" data-disable-with="Sign up">
+                </div>
+</form>              <br>
+                <a class="discret-link" href="/users/sign_in">
+    Vous avez déjà un compte ? C'est par là <i class="fa fa-arrow-circle-right"></i>
+</a>
+
+
+
+            </div>
           </div>
+
+
         </div>
       </div>
     </div>
