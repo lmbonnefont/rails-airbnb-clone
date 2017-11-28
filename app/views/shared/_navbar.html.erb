@@ -16,7 +16,10 @@
     <% end %>
 
     <i class="fa fa-shopping-cart"></i>
-    <%= image_tag "chuck.jpg", id: "logo", width: 50, class: "rounded-avatar" %>
+    <% if user_signed_in? %>
+      <%=link_to (image_tag "chuck.jpg", id: "logo", width: 50, class: "rounded-avatar"), users_path %>
+      <%= link_to  " Hi " + current_user.surname, users_path %>
+    <% end %>
 
   </div>
 
