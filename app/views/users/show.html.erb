@@ -6,8 +6,9 @@
   <li><%= @user.email %> <%=  %></li>
 </ul>
 
+<%= link_to "Delete", destroy_user_session_path, method: :delete, data: { confirm: "You sure?" } %>
+
 <% if current_user %>
-  <%= link_to "Delete", destroy_user_session_path, method: :delete, data: { confirm: "You sure?" } %>
   <% @user.destroy %>
 <% end %>
 
