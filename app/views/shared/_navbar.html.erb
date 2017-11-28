@@ -6,11 +6,11 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Buy</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sell</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign-in</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign-up</a>
+    <%= link_to "Sell", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Messages", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Sign-in", new_user_session_path, class: "btn btn-primary espacement-composants" %>
+    <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-success espacement-composants" %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning espacement-composants" %>
 
     <i class="fa fa-shopping-cart"></i>
 
