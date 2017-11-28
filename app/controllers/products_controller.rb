@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    authorize @product
   end
 
   def new
@@ -19,21 +20,25 @@ class ProductsController < ApplicationController
     @product.user = current_user
     if @product.save
       redirect_to product_path(@product)
+      authorize @product
     else
       render :new
     end
   end
 
   def edit
+    authorize @product
   end
 
   def update
+    authorize @product
     @product.update(product_params)
     redirect_to product_path(@product)
   end
 
   def destroy
     @product.delete
+    authorize @product
     redirect_to products_path
   end
 
