@@ -6,8 +6,8 @@
   <%= f.input :description %>
   <%= f.input :address %>
 
-  <!-- Photo to be linked to cloudinary -->
+  <!-- ajout photo uploader -->
   <%= f.input :photo %>
-
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit "Add a product", class: "btn btn-primary" %>
 <% end %>
