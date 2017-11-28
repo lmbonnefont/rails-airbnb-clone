@@ -1,2 +1,9 @@
 <h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h2>Current product specs are:</h2>
+<ul>
+  <li>Price: <%= @product.price %></li>
+  <li>Description: <%= @product.description %></li>
+  <li>Address: <%= @product.address %></li>
+  <li>Photo: <%= @product.photo %></li>
+  <li>Availability: <%= @product.availability ? "Ok" : "Nope" %></li>
+</ul>
