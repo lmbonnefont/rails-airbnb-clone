@@ -87,7 +87,7 @@ Product.destroy_all
     title: "Super bureau",
     quick_description: "Classe, vrai bois aggloméré",
     price: 45,
-    description: "LA moitié de mon capital y est passé, prenez en soin.",
+    description: "La moitié de mon capital y est passé, prenez en soin.",
     availability: true,
     address: "10 rue de la Pompe",
     photo: "http://www.royaledeco.com/78877/bureau-design-en-bois-et-gris-laque-1-porte-5-tiroirs-waki.jpg",
