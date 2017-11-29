@@ -9,11 +9,18 @@
     <%= "CONNECTED" if user_signed_in? %>
     <%= link_to "Sell", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Messages", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Sign-in", new_user_session_path, class: "btn btn-primary espacement-composants" %>
-    <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-success espacement-composants" %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning espacement-composants" %>
+    <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning espacement-composants" %>
+    <% else %>
+     <%= link_to "Sign-in", new_user_session_path, class: "btn btn-primary espacement-composants" %>
+     <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-success espacement-composants" %>
+    <% end %>
 
     <i class="fa fa-shopping-cart"></i>
+    <% if user_signed_in? %>
+      <%=link_to (image_tag "chuck.jpg", id: "logo", width: 50, class: "rounded-avatar"), users_path %>
+      <%= link_to  " Hi " + current_user.surname, users_path %>
+    <% end %>
 
   </div>
 

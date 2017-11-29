@@ -1,0 +1,12 @@
+<h1>Your Profile</h1>
+
+<ul>
+  <li><%= @user.name %></li>
+  <li><%= @user.surname %></li>
+  <li><%= @user.email %> <%=  %></li>
+</ul>
+
+<%= link_to 'Cancel my account', users_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+
+<h3>Order History</h3>
+<p>(Display basket)</p>
