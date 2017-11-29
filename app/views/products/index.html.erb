@@ -26,7 +26,7 @@
         <div class="card-bottom">
           <p><%= product.user %></p>
         </div>
-      <%=  link_to "", products_path %>
+      <%=  link_to "", product_path(product), class: "card-link"  %>
       </div>
     </div>
     <% end %>

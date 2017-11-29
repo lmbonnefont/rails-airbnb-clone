@@ -7,12 +7,13 @@ class UsersController < ApplicationController
 
   def edit
     authorize @user
+    @path = request.referer
   end
 
   def update
     authorize @user
     @user.update(product_params)
-    redirect_to new_product_path
+    redirect_to params[:user][:path]
   end
 
   private
