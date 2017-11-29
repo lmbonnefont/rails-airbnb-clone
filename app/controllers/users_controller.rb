@@ -4,6 +4,14 @@ class UsersController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    @user.update(product_params)
+    redirect_to new_product_path
+  end
+
   private
 
   def set_user
@@ -11,6 +19,6 @@ class UsersController < ApplicationController
   end
 
   def product_params
-    params.require(:user).permit(:email, :name, :surname)
+    params.require(:user).permit(:email, :name, :surname, :password)
   end
 end

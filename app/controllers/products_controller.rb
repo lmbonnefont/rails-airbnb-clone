@@ -6,6 +6,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = policy_scope(Product).order(created_at: :desc)
+    @products = Product.all
+    @products_top_3 = Product.first(3)
+    @products_last_2 = Product.last(2)
   end
 
   def show
@@ -13,6 +16,9 @@ class ProductsController < ApplicationController
   end
 
   def new
+    if current_user.name == ""
+      redirect_to edit_user_path(current_user)
+    end
     @product = Product.new
     authorize @product
   end
