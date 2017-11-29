@@ -6,7 +6,9 @@
   <li><%= @user.email %> <%=  %></li>
 </ul>
 
-<%= link_to 'Cancel my account', users_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+<%= link_to 'Destroy my account', user_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+
+<%= link_to 'Update my account', edit_user_path(@user), class: "btn btn-danger btn-sm" %>
 
 <h3>Order History</h3>
 <p>(Display basket)</p>

@@ -9,6 +9,9 @@ class ProductsController < ApplicationController
   end
 
   def new
+    if current_user.name == ""
+      redirect_to edit_user_path(current_user)
+    end
     @product = Product.new
   end
 
