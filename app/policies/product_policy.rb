@@ -1,5 +1,4 @@
 class ProductPolicy < ApplicationPolicy
-
   def show?
     user.present?
   end
