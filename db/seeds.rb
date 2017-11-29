@@ -33,7 +33,7 @@ Product.destroy_all
     title: "Lot de 102 imprimantes 3D",
     quick_description: "N'imprime que sur des feuilles A4",
     price: 110,
-    description: "La base du business initiaement prévu. J'en ai achaté 3 containers.",
+    description: "La base du business initialement prévu. J'en ai acheté 3 containers.",
     availability: true,
     address: "124 rue de la Chatière",
     photo: "http://annonces-gratuites.index-net.org/images/90402_16345az5NaYaQxoO.jpg",
@@ -46,7 +46,7 @@ Product.destroy_all
     title: "Scooter de livraison",
     quick_description: "Roule, freiner avec les pieds",
     price: 159,
-    description: "À une odeur permanente de fumier",
+    description: "A une odeur permanente de fumier",
     availability: true,
     address: "12 rue de Tocqueville",
     photo: "http://www.lapizz-foix.com/medias/album/images/scooter-livraison.jpg",
@@ -59,7 +59,7 @@ Product.destroy_all
     title: "Canapé de burau (ou pas)",
     quick_description: "Canapé chill",
     price: 110,
-    description: "Canapé idéal pour chiller au boulot.",
+    description: "Canapé idéal pour chiller au boulot avec les reufs.",
     availability: true,
     address: "124 rue de la Chatière",
     photo: "http://www.francecanape.com/images/canape/canape-design-maguelone/canape-design-maguelone-demo.jpg",
@@ -110,3 +110,42 @@ Product.destroy_all
   }
 
   a = User.create!(hash)
+
+  ########
+
+  hash = {
+    surname: "Johnny",
+    name: "Bigoud",
+    password: "123456",
+    email: "johnnyb@gmail.com",
+    age: 35,
+    profil_picture: "http://resize2-parismatch.ladmedia.fr/r/625,417,center-middle,ffffff/img/var/news/storage/images/paris-match/people/repliquant-aux-rumeurs-johnny-hallyday-prend-la-route-du-studio-1376894/22861601-1-fre-FR/Repliquant-aux-rumeurs-Johnny-Hallyday-prend-la-route-du-studio.jpg",
+    company_name: "Optique 2000",
+    failure_history: "Qu'est-ce qu'elle a ma gueule ?",
+  }
+
+  a = User.create!(hash)
+
+  hash = {
+    title: "Oculus Rift",
+    quick_description: "Utilisé pour faire du Excel",
+    price: 12,
+    description: "Il est beau il est chaud, on peut tout voir en réalité augmenté. Superstylé mais I'm a failure... So je le revends snif.",
+    availability: true,
+    address: "11 rue du P'tit Loulou",
+    photo: "https://icdn5.digitaltrends.com/image/oculus-rift-on-matt-set-right-800x533-c.jpg?ver=1",
+    user: a,
+  }
+
+  Product.create!(hash)
+
+  hash = {
+    title: "Téléphone Alcatel",
+    quick_description: "Pour harceler vos clients",
+    price: 110,
+    description: "Incassable, sert aussi de matraque.",
+    availability: true,
+    address: "56 avenue de Moi",
+    photo: "http://www.ave.fr/photos/485/B234301.JPG",
+    user: a,
+  }
