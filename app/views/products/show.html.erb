@@ -1,12 +1,42 @@
-<h1>Products#show</h1>
-<h2>Current product specs are:</h2>
-<ul>
-  <li>Price: <%= @product.price %></li>
-  <li>Description: <%= @product.description %></li>
-  <li>Address: <%= @product.address %></li>
-  <li>Photo: <%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %></li>
-  <li>Availability: <%= @product.availability ? "Ok" : "Nope" %></li>
-</ul>
+
+
+
+<div class="product-container">
+  <div class="left-blank">p</div>
+  <div class="product-image">
+    <%= cl_image_tag @product.photo, height: 229, width: 400, crop: :fill %>
+
+  </div>
+  <div class="product-details">
+    <div class="product-name">
+      <h2>@product.name</h2>
+
+    </div>
+    <div class="product-attributes">
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @product.address %></p>
+      <p>Availability: <%= @product.availability ? "Ok" : "Nope" %></p>
+
+    </div>
+    <div class="product-price">
+      <h3>Price: <%= @product.price %></h3>
+
+    </div>
+    <div class="add_to_basket">
+      <a href="#" class="btn btn-success">Add to basket</a>
+
+    </div>
+
+  </div>
+</div>
+<div class="description-wrapper">
+  <div class="product-description">
+    <h2>Description</h2>
+    <p><%= @product.description %></p>
+  </div>
+</div>
+
+
+
 
 <p>
   <%= link_to "Home", root_path %> |
@@ -14,3 +44,5 @@
   <%= link_to "Edit", edit_product_path %> |
   <%= link_to "Delete", product_path(@product), method: :delete %>
 </p>
+
+
