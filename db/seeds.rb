@@ -46,7 +46,7 @@ Product.destroy_all
     title: "Scooter de livraison",
     quick_description: "Roule, freiner avec les pieds",
     price: 159,
-    description: "Une belle bouse qui fait ses kilomètres malgré une odeur permanente de fumier",
+    description: "À une odeur permanente de fumier",
     availability: true,
     address: "12 rue de Tocqueville",
     photo: "http://www.lapizz-foix.com/medias/album/images/scooter-livraison.jpg",
