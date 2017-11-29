@@ -1,6 +1,21 @@
-<%= simple_form_for @user, url: user_path(@user), method: :patch  do |f| %>
-  <%= f.input :email %>
-  <%= f.input :surname %>
-  <%= f.input :name %>
-  <%= f.submit "Edit", class: "btn btn-primary" %>
-<% end %>
+
+
+<div class="backgroud-img" style="background-image: url(<%= asset_path "edit-profile-background.jpg" %>);">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-new">
+          <h2>Edit your profile</h2>
+          <%= simple_form_for @user, url: user_path(@user), method: :patch  do |f| %>
+            <%= f.input :email %>
+            <%= f.input :surname %>
+            <%= f.input :name %>
+            <%= f.submit "Edit profile", class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

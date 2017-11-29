@@ -1,13 +1,23 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<div class="backgroud-img" style="background-image: url(<%= asset_path "edit-product-background.jpg" %>);">
 
-<%= simple_form_for [@user, @product] do |f| %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :address %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-new">
+          <h2>Edit your product</h2>
+          <%= simple_form_for [@user, @product] do |f| %>
+            <%= f.input :price %>
+            <%= f.input :description %>
+            <%= f.input :address %>
 
-  <!-- Photo to be linked to cloudinary -->
-  <%= f.input :photo %>
+            <!-- ajout photo uploader -->
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Edit product", class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= f.submit "Edit a product", class: "btn btn-primary" %>
-<% end %>
+</div>
