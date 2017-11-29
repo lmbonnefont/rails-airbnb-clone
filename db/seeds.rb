@@ -130,7 +130,7 @@ Product.destroy_all
     title: "Oculus Rift",
     quick_description: "Utilisé pour faire du Excel",
     price: 12,
-    description: "Il est beau il est chaud, on peut tout voir en réalité augmenté. Superstylé mais I'm a failure... So je le revends snif.",
+    description: "Il est beau il est chaud !",
     availability: true,
     address: "11 rue du P'tit Loulou",
     photo: "https://icdn5.digitaltrends.com/image/oculus-rift-on-matt-set-right-800x533-c.jpg?ver=1",
