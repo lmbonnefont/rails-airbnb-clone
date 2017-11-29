@@ -49,18 +49,18 @@
 
 .btn-colored {
     display: inline-block;
-    background: #a6cbec;
+    background: #1f69e2;
     color: white;
     text-transform: uppercase;
     padding: 20px 30px;
     border-radius: 4px;
-    box-shadow: 0px 17px 10px -10px rgba(128, 136, 151,0.4);
+    box-shadow: 0px 17px 10px -10px rgba(128, 136, 151,0.1);
     cursor: pointer;
     transition: all ease-in-out 300ms;
     margin-top: 30px;
 
     &:hover {
-      box-shadow: 0px 37px 20px -20px rgba(128, 136, 151,0.2);
+      box-shadow: 0px 37px 20px -20px rgba(128, 136, 151,0.1);
       transform: translate(0px, -10px) scale(1.2);
     }
 }
