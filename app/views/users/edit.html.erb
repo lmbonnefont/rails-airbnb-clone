@@ -1,0 +1,6 @@
+<%= simple_form_for @user, url: user_path(@user), method: :patch  do |f| %>
+  <%= f.input :email %>
+  <%= f.input :surname %>
+  <%= f.input :name %>
+  <%= f.submit "Edit", class: "btn btn-primary" %>
+<% end %>

@@ -1,13 +1,22 @@
-<h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<div class="wrapper-lightgrey">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-new">
+          <h2>Add a product</h2>
+          <%= simple_form_for [@user, @product] do |f| %>
+            <%= f.input :price %>
+            <%= f.input :description %>
+            <%= f.input :address %>
 
-<%= simple_form_for [@user, @product] do |f| %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :address %>
+            <!-- ajout photo uploader -->
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Add a product", class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- ajout photo uploader -->
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "Add a product", class: "btn btn-primary" %>
-<% end %>
+</div>
