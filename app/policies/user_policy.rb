@@ -1,7 +1,4 @@
-class ProfilesPolicy < ApplicationPolicy
-  def show
-  end
-
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope
