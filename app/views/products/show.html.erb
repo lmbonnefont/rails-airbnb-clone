@@ -3,6 +3,7 @@
 
 <div class="product-container">
   <div class="left-blank">p</div>
+
   <% if @product.photo.present? %>
     <div class="product-image">
       <%= cl_image_tag @product.photo, height: 229, width: 400, crop: :fill %>
