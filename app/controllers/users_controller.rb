@@ -12,9 +12,8 @@ class UsersController < ApplicationController
 
   def update
     authorize @user
-
     @user.update(product_params)
-    redirect_to request.path
+    redirect_to params[:user][:path]
   end
 
   private
