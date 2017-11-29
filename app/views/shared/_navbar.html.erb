@@ -16,7 +16,8 @@
     <% end %>
 
     <% if user_signed_in? %>
-      <%=link_to (image_tag "chuck.jpg", id: "logo", width: 50, class: "rounded-avatar"), user_path(current_user) %>
+      <%=link_to cl_image_tag(current_user.profil_picture,
+      width: 50, height: 50, crop: :thumb, gravity: :face, radius: :max), user_path(current_user) %>
       <%= link_to  " Hi " + current_user.surname, user_path(current_user) %>
     <% end %>
 
