@@ -1,14 +1,35 @@
-<h1>Your Profile</h1>
+<h1><em>Your Profile</em></h1>
+<div class="text-center infos-profil">
+  <ul>
+    <li>Name: <% if @user.name == "" %>
+          We still don't know your name pretty face ... Update your profile !
+         <% else %>
+           <%= @user.name %>
+         <% end %></li>
 
-<ul>
-  <li><%= @user.name %></li>
-  <li><%= @user.surname %></li>
-  <li><%= @user.email %> <%=  %></li>
-</ul>
+        <li>Surname: <% if @user.surname == "" %>
+          We still don't know your surname pretty face ... Update your profile !
+         <% else %>
+           <%= @user.surname %>
+         <% end %></li>
+
+        <li>E-mail: <%= @user.email %> <%=  %></li>
+
+        <li>Age: <% if @user.age == "" %>
+          Tell-us how old you are ;)
+         <% else %>
+           <%= @user.age %>
+         <% end %></li>
+
+        <li>Company name: <% if @user.company_name == "" %>
+          Which company did you fail ?
+         <% else %>
+           <%= @user.company_name %>
+         <% end %></li>
+
+  </ul>
+</div>
 
 <%= link_to 'Destroy my account', user_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
 
 <%= link_to 'Update my account', edit_user_path(@user), class: "btn btn-danger btn-sm" %>
-
-<h3>Order History</h3>
-<p>(Display basket)</p>

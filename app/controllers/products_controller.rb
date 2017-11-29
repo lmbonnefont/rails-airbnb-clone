@@ -6,11 +6,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = policy_scope(Product).order(created_at: :desc)
-    @products = Product.all
-    @products_top_3 = Product.first(3)
-    @products_last_2 = Product.last(2)
-    @products_first_6 = Product.first(6)
-    @products_last_6 = Product.last(6)
   end
 
   def show
