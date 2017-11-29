@@ -22,6 +22,7 @@ gem 'faker'
 
 gem 'devise'
 gem 'pundit'
+gem "geocoder"
 
 
 group :development, :test do
