@@ -6,11 +6,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = policy_scope(Product).order(created_at: :desc)
-    @products = Product.all
-    @products_top_3 = Product.first(3)
-    @products_last_2 = Product.last(2)
-    @products_first_6 = Product.first(6)
-    @products_last_6 = Product.last(6)
   end
 
   def show
@@ -28,6 +23,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.availability = true
     @product.user = current_user
     if @product.save
       redirect_to product_path(@product)
@@ -60,6 +56,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:price, :description, :address, :photo)
+    params.require(:product).permit(:title, :quick_description, :price, :description, :address, :photo)
   end
 end

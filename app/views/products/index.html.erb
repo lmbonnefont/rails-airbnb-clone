@@ -1,177 +1,55 @@
-
 <div class="row featurette featurette-failers  ">
    <h1 class="text-center "><span class="highlight">Buy Codes</span></h1>
   <div class="col-md-6 col-md-offset-3 text-center">
-    <h2 class="featurette-heading">Get all what you need in a minute.<span class="text-muted">Do not hesite to chat with us.</span></h2>
+    <h2 class="featurette-heading">Failers have nice codes and algorithms availed for you.<span class="text-muted">Ask failers for more details.</span></h2>
   </div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-  <% @products_first_6.each do |product| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card card-btn">
-        <div class="card-top">
-          <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        </div>
-        <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        </div>
-        <div class="card-description">
-          <h2><%= product.title %> </h2>
-          <p><%= product.description %></p>
-          <h3><%= product.price %> €</h3>
-        </div>
-        <div class="card-bottom">
-          <p><%= product.user %></p>
-        </div>
-      <%=  link_to "", product_path(product), class: "card-link"  %>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+ <%= render 'shared/product-card'  %>
 
 <div class="row featurette featurette-failers  ">
    <h1 class="text-center "><span class="highlight">Buy Clients</span></h1>
   <div class="col-md-6 col-md-offset-3 text-center">
-    <h2 class="featurette-heading">Get all what you need in a minute.<span class="text-muted">Do not hesite to chat with us.</span></h2>
+    <h2 class="featurette-heading">Failers will lose their clients but you can continue to provide services to them.<span class="text-muted">All datas are confidential.</span></h2>
   </div>
 </div>
 
-
-<div class="container">
-  <div class="row">
-  <% @products_last_6.each do |product| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card card-btn">
-        <div class="card-top">
-          <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        </div>
-        <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        </div>
-        <div class="card-description">
-          <h2><%= product.title %> </h2>
-          <p><%= product.quick_description %></p>
-          <h3><%= product.price %> €</h3>
-        </div>
-        <div class="card-bottom">
-          <p><%= product.user %></p>
-        </div>
-      <%=  link_to "", products_path %>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+ <%= render 'shared/product-card'  %>
 
 
 <div class="row featurette featurette-failers  ">
    <h1 class="text-center "><span class="highlight">Buy Furnitures</span></h1>
   <div class="col-md-6 col-md-offset-3 text-center">
-    <h2 class="featurette-heading">Get all what you need in a minute.<span class="text-muted">Do not hesite to chat with us.</span></h2>
+    <h2 class="featurette-heading">Failers won't use anymore these stuffs.<span class="text-muted">Refurnishe your office quickly witch fits perfectly with startups needs .</span></h2>
   </div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-  <% @products_first_6.each do |product| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card card-btn">
-        <div class="card-top">
-          <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        </div>
-        <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        </div>
-        <div class="card-description">
-          <h2><%= product.title %> </h2>
-          <p><%= product.quick_description %></p>
-          <h3><%= product.price %> €</h3>
-        </div>
-        <div class="card-bottom">
-          <p><%= product.user %></p>
-        </div>
-      <%=  link_to "", products_path %>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+
+ <%= render 'shared/product-card'  %>
 
 
 <div class="row featurette featurette-failers  ">
    <h1 class="text-center "><span class="highlight">Find new offices</span></h1>
   <div class="col-md-6 col-md-offset-3 text-center">
-    <h2 class="featurette-heading">Get all what you need in a minute.<span class="text-muted">Do not hesite to chat with us.</span></h2>
+    <h2 class="featurette-heading">Failers will leave their office asap because it cost too much.<span class="text-muted">Help them, help the owner to get a new tenant, help you to grow faster.</span></h2>
   </div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-  <% @products_last_6.each do |product| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card card-btn">
-        <div class="card-top">
-          <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        </div>
-        <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        </div>
-        <div class="card-description">
-          <h2><%= product.title %> </h2>
-          <p><%= product.quick_description %></p>
-          <h3><%= product.price %> €</h3>
-        </div>
-        <div class="card-bottom">
-          <p><%= product.user %></p>
-        </div>
-      <%=  link_to "", products_path %>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+ <%= render 'shared/product-card'  %>
 
 
 <div class="row featurette featurette-failers  ">
    <h1 class="text-center "><span class="highlight">Find new Employees over skilled</span></h1>
   <div class="col-md-6 col-md-offset-3 text-center">
-    <h2 class="featurette-heading">Get all what you need in a minute.<span class="text-muted">Do not hesite to chat with us.</span></h2>
+    <h2 class="featurette-heading">Employees working in failing companies are often over skilled.<span class="text-muted">Recruit them all :-).</span></h2>
   </div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-  <% @products_first_6.each do |product| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card card-btn">
-        <div class="card-top">
-          <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        </div>
-        <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        </div>
-        <div class="card-description">
-          <h2><%= product.title %> </h2>
-          <p><%= product.quick_description %></p>
-          <h3><%= product.price %> €</h3>
-        </div>
-        <div class="card-bottom">
-          <p><%= product.user %></p>
-        </div>
-      <%=  link_to "", products_path %>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
-
+ <%= render 'shared/product-card'  %>
 
 
 
