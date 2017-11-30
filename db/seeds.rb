@@ -3,7 +3,7 @@ require 'faker'
 User.destroy_all
 Product.destroy_all
 
-  hash = {
+  user1 = {
     surname: "Jean",
     name: "Bonbeur",
     password: "123456",
@@ -14,9 +14,8 @@ Product.destroy_all
     failure_history: "En vrai j'ai merdé grave ... Franchement je ne mérite que l'opprobe public",
   }
 
-  a = User.create!(hash)
 
-  hash = {
+  item1 = {
     title: "MacBook pourri",
     quick_description: "Plus de clavier, écran sympa",
     price: 12,
@@ -24,12 +23,10 @@ Product.destroy_all
     availability: true,
     address: "12 rue de Tocqueville",
     photo: "http://img.macg.co/2009/06/macbook-air-bus-20091127-203134.jpg",
-    user: a,
   }
 
-  Product.create!(hash)
 
-  hash = {
+  item2 = {
     title: "Lot de 102 imprimantes 3D",
     quick_description: "N'imprime que sur des feuilles A4",
     price: 110,
@@ -37,12 +34,10 @@ Product.destroy_all
     availability: true,
     address: "124 rue de la Chatière",
     photo: "http://annonces-gratuites.index-net.org/images/90402_16345az5NaYaQxoO.jpg",
-    user: a,
   }
 
-  Product.create!(hash)
 
-  hash = {
+  item3 = {
     title: "Scooter de livraison",
     quick_description: "Roule, freiner avec les pieds",
     price: 159,
@@ -50,12 +45,9 @@ Product.destroy_all
     availability: true,
     address: "12 rue de Tocqueville",
     photo: "http://www.lapizz-foix.com/medias/album/images/scooter-livraison.jpg",
-    user: a,
   }
 
-  Product.create!(hash)
-
-  hash = {
+  item4 = {
     title: "Canapé de burau (ou pas)",
     quick_description: "Canapé chill",
     price: 110,
@@ -63,14 +55,12 @@ Product.destroy_all
     availability: true,
     address: "124 rue de la Chatière",
     photo: "http://www.francecanape.com/images/canape/canape-design-maguelone/canape-design-maguelone-demo.jpg",
-    user: a,
   }
 
-  Product.create!(hash)
 
 #########
 
-  hash = {
+  user2 = {
     surname: "Pierre",
     name: "Dubrulle",
     password: "123456",
@@ -81,9 +71,8 @@ Product.destroy_all
     failure_history: "Rien à dire, je touche le fond mais creuse toujours. Besoin urgent de pépettes.",
   }
 
-  a = User.create!(hash)
 
-  hash = {
+  item5 = {
     title: "Super bureau",
     quick_description: "Classe, vrai bois aggloméré",
     price: 45,
@@ -91,14 +80,11 @@ Product.destroy_all
     availability: true,
     address: "10 rue de la Pompe",
     photo: "http://www.royaledeco.com/78877/bureau-design-en-bois-et-gris-laque-1-porte-5-tiroirs-waki.jpg",
-    user: a,
   }
-
-  Product.create!(hash)
 
 #########
 
-  hash = {
+  user3 = {
     surname: "Luc",
     name: "Levaultour",
     password: "123456",
@@ -109,11 +95,9 @@ Product.destroy_all
     failure_history: "Besoin de matos pour mes 15 stagiaires de l'été",
   }
 
-  a = User.create!(hash)
-
   ########
 
-  hash = {
+  user4 = {
     surname: "Johnny",
     name: "Bigoud",
     password: "123456",
@@ -124,9 +108,8 @@ Product.destroy_all
     failure_history: "Qu'est-ce qu'elle a ma gueule ?",
   }
 
-  a = User.create!(hash)
 
-  hash = {
+  item6 = {
     title: "Oculus Rift",
     quick_description: "Utilisé pour faire du Excel",
     price: 12,
@@ -134,12 +117,10 @@ Product.destroy_all
     availability: true,
     address: "11 rue du P'tit Loulou",
     photo: "https://icdn5.digitaltrends.com/image/oculus-rift-on-matt-set-right-800x533-c.jpg?ver=1",
-    user: a,
   }
 
-  Product.create!(hash)
 
-  hash = {
+  item7 = {
     title: "Téléphone Alcatel",
     quick_description: "Pour harceler vos clients",
     price: 110,
@@ -147,5 +128,22 @@ Product.destroy_all
     availability: true,
     address: "56 avenue de Moi",
     photo: "http://www.ave.fr/photos/485/B234301.JPG",
-    user: a,
   }
+
+array_user = [user1, user2, user3, user4]
+array_item = [item1, item2, item3, item4, item5, item6, item7]
+users = []
+
+array_user.each do |user|
+  a = User.new(user)
+  a.remote_profil_picture_url = user[:profil_picture]
+  a.save
+  users << a
+end
+
+array_item.each do |item|
+  b = Product.new(item)
+  b.remote_photo_url = item[:photo]
+  b.user = users.sample
+  b.save
+end
