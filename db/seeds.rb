@@ -190,8 +190,10 @@ array_user.each do |user|
 end
 
 array_item.each do |item|
-  b = Product.new(item)
-  b.remote_photo_url = item[:photo]
-  b.user = users.sample
-  b.save!
+  c = Product.new(item)
+  c.remote_photo_url = item[:photo]
+  c.user = users.sample
+  c.save
 end
+
+b.product = c
