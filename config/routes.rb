@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :baskets, only: [ :show ]
   end
   resources :products, only: [ :new, :create , :index, :show, :edit, :update, :destroy ] do
-    resources :messages, only: [:new, :create, :edit, :update]
+    resources :messages, only: [:new, :create, :update, :index, :show]
   end
 
   root to: 'pages#home'

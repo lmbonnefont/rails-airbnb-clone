@@ -1,0 +1,9 @@
+<% if current_user == @message.user %>
+  <% @message.content.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% else %>
+  <%= @message.content.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
