@@ -5,3 +5,4 @@ autocomplete();
 
 import { loadDynamicBannerText } from '../components/banner.js';
 loadDynamicBannerText();
+
