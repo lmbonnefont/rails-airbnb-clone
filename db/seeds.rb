@@ -151,7 +151,7 @@ Product.destroy_all
     description: "Un vélo selon vos envies. Sablage et thermolathermolaquage époxy en ce qui concerne le cadre, la fourche et les jantes. ( toutes les teintes sont possibles) Il est également possible d'avoir les jantes en bois vernis. Le guidon et les gardes boue sont en chêne teinté selon votre choix et ensuite en finition par un vernis marin spécialement utilisé par les constructeurs de bateaux italiens. ( 4 couches ) Les différents accessoires s'adapteront suivant vos envies et votre budget. Il est possible de réaliser cette prestation sur tout types de vélos. ( ville, fixie etc...) Chaque réalisation est unique et ne sera produite qu'en un seul exemplaire. Le délai de réalisation est d'environ deux semaines. Le vélo est garanti un an pièces et main d'œuvre. N'hésitez pas à me contacter pour plus de renseignements et un devis rapide.",
     availability: true,
     address: "Rue du Prince Royal 3, 1050 Ixelles, Belgique",
-    photo: "https://images.unsplash.com/photo-1472709171579-139831cdf19e",
+    photo: "http://www.chasejarvis.com/wp-content/uploads/2011/04/20110420_Bikes_BBB5199-576x324.jpg",
   }
 
 
@@ -162,7 +162,7 @@ Product.destroy_all
     description: "Le courrier chic porte visiblement des messages non seulement dans l'intérieur de son sac, mais encore dehors, pour tout le monde. Le dispositif professionnel offre cher au lieu Bag de Messenger Par marque pour les prises de publicité supplémentaires ou une propre publicité. Einsteckfach transparent, étanche au dos prend des affiches d'A3. Aussi l'équipement intérieur a projeté CHER AU LIEU avec Insider-Knowhow : Le sac intérieur ausknöpfbare avec la fermeture éclair pour des chèques de transport, le plan de ville, les crayons est portable etc. aussi comme Hüftgurttasche. Organizerfach pour les papiers importants crée l'ordre avec les subdivisions pratiques. Rollverschluss avec Klettband à la longueur de complément permet l'accès rapide et le transport des émissions encombrantes. Bag de Messenger Par est équipé parfaitement des réflecteurs étendus. le Smart Messenger bike only carry messages inside their bags, but le display them on the outside. Ortlieb's full-featured Messenger Bag Par has a le professionnel le display surface for additional advertising. The transparent, waterproof le dossier at the cuis offers space for size A3 du poster. The bag’s internal life has been designed with la personne bien informée le savoir-faire : the intérieur zippered pocket for receipts, maps, pens etc. is removable by means of deale des badges et can attached to the waist belt. The organizer with subdividers keeps important documents dans la commande. Presque Access et transport of bulky shipments is guaranteed by the roule closure with à part long Velcro. Security ranks high when biking tous day long dans le centre-ville traffic : Bag de Messenger the Par is kitted out with large sized reflectors.",
     availability: true,
     address: "Rue du Prince Royal 3, 1050 Ixelles, Belgique",
-    photo: "https://images.unsplash.com/photo-1505308144658-03c69861061a",
+    photo: "https://tctechcrunch2011.files.wordpress.com/2015/09/img_5608.jpg",
   }
 
   item10 = {
@@ -172,7 +172,7 @@ Product.destroy_all
     description: "Le nouvel ultra portable Apple MacBook 12 pouces (MNYF2FN/A) est le résultat d'un défi presque impossible : concevoir le Mac portable le plus léger et le plus compact jamais créé, sans dénaturer l'expérience Mac. Pour en arriver là, Apple a repensé tous les éléments un à un, pour les rendre non seulement plus légers et plus fins, mais aussi plus perfectionnés. Le fruit de ce travail est bien plus qu'un nouvel ordinateur portable. C'est l'avenir de l'ordinateur portable.",
     availability: true,
     address: "Rue du Prince Royal 3, 1050 Ixelles, Belgique",
-    photo: "https://images.unsplash.com/photo-1477327070293-75f15e291bb0",
+    photo: "https://cdn-images-1.medium.com/max/1200/1*msFr4noPO5-qnGo30k6aHA.jpeg",
   }
 
 array_user = [user1, user2, user3, user4, user5]
