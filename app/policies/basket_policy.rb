@@ -1,6 +1,6 @@
 class BasketPolicy < ApplicationPolicy
   def show?
-    true
+    user.present?
   end
 
   class Scope < Scope

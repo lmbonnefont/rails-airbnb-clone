@@ -1,5 +1,5 @@
 class BasketsController < ApplicationController
   def show
-    authorize Basket.new
+    authorize @basket = Basket.new
   end
 end
