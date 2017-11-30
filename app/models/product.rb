@@ -10,4 +10,5 @@ class Product < ApplicationRecord
   validates :address, presence: true
 
   mount_uploader :photo, PhotoUploader
+  has_one :message
 end
