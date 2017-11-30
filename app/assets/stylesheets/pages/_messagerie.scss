@@ -1,0 +1,32 @@
+.contenant {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.contenant-btn {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.messages {
+  width: 300px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.send {
+  background-color: blue;
+}
+
+.received {
+  background-color: red;
+  margin-left: auto;
+}

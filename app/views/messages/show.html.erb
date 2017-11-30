@@ -1,12 +1,18 @@
-<% @message.reponses.each do |reponse| %>
-  <% if reponse.user == current_user %>
-    <p> <%= reponse.texte %> </p>
-  <% else %>
-    <p> <%= reponse.texte %> </p>
-  <% end %>
-<% end %>
+<div class="contenant">
+  <div class="messages">
+    <% @message.reponses.each do |reponse| %>
+      <% if reponse.user == current_user %>
+        <div class="message send text-center"> <%= reponse.texte %> </div>
+      <% else %>
+        <div class="message received text-center"> <%= reponse.texte %> </div>
+      <% end %>
+    <% end %>
+  </div>
 
-<%= simple_form_for @message, url: product_message_reponses_path(params[:product_id], params[:id]), method: :post do |f| %>
-<%= f.input :content %>
-<%= f.button :submit %>
-<% end %>
+  <%= simple_form_for @message, url: product_message_reponses_path(params[:product_id], params[:id]), method: :post do |f| %>
+  <%= f.input :content, placeholder: "Type your message here"%>
+  <div class="contenant-btn">
+    <%= f.button :submit, value: "Send" %>
+  </div>
+  <% end %>
+</div>
