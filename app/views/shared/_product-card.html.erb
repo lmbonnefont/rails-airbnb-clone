@@ -5,12 +5,12 @@
       <div class="card card-btn">
         <div class="card-top">
           <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          <%= cl_image_tag product.user.profil_picture, height: 30, width: 30, gravity: :face, crop: :fill, radius: :max %>
         </div>
           <%= cl_image_tag(product.photo, class: "card-image") %>
         <div class="card-description">
           <h2><%= product.title %> </h2>
-          <p><%= product.description %></p>
+          <p><%= product.quick_description %></p>
           <h3><%= product.price %> €</h3>
         </div>
         <div class="card-bottom">
@@ -28,12 +28,12 @@
       <div class="card card-btn">
         <div class="card-top">
           <div class="card-category"><%= product.category %></div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          <%= cl_image_tag product.user.profil_picture, height: 35, width: 35, gravity: :face, crop: :fill, radius: :max %>
         </div>
         <%= cl_image_tag(product.photo, class: "card-image") %>
         <div class="card-description">
           <h2><%= product.title %></h2>
-          <p><%= product.description %></p>
+          <p><%= product.quick_description %></p>
           <h3><%= product.price %> €</h3>
         </div>
         <div class="card-bottom">
