@@ -4,15 +4,11 @@ class MessagePolicy < ApplicationPolicy
     user.present?
   end
 
-  def create?
-    user.present?
-  end
-
   def show?
     user.present?
   end
 
-  def update?
+  def index?
     user.present?
   end
 

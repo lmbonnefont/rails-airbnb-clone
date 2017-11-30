@@ -7,17 +7,12 @@ class MessagesController < ApplicationController
     redirect_to new_product_message_reponse_path(params[:product_id], @message)
   end
 
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
   def show
     authorize @message = Message.find(params[:id])
+  end
+
+  def index
+    authorize @messages = Message.where("user = ?", params[:user_id])
   end
 
 end

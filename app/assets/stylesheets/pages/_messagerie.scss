@@ -1,5 +1,5 @@
 .contenant {
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -17,16 +17,17 @@
 }
 
 .message {
-  width: 120px;
+  width: 200px;
   margin-bottom: 10px;
   border-radius: 20px;
+  padding: 8px;
 }
 
 .send {
-  background-color: blue;
+  background-color: #ffe5b9;
 }
 
 .received {
-  background-color: red;
+  background-color: #ff8356;
   margin-left: auto;
 }

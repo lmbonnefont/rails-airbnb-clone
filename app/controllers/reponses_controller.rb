@@ -13,6 +13,14 @@ class ReponsesController < ApplicationController
     end
     @reponse.user = current_user
     @reponse.message = Message.find(params[:message_id])
+    if current_user == @reponse.message.user
+      # @reponse.message.new_message = @reponse.message.new_message + 1
+      @reponse.message.product.user.new_message = @reponse.message.product.user.new_message + 1
+      @reponse.message.product.user.save
+    else
+      @reponse.message.user.new_message = @reponse.message.user.new_message + 1
+      @reponse.message.user.save
+    end
     @reponse.save
     redirect_to product_message_path(params[:product_id], @reponse.message)
   end
