@@ -12,7 +12,7 @@
 
 
     <% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning espacement-composants" %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn draw-border" %>
     <% else %>
      <%= link_to "Log in", new_user_session_path, class: "btn draw-border" %>
      <%= link_to "Try", new_user_registration_path, class: "btn draw-border" %>
