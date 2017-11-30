@@ -10,13 +10,12 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <%= link_to "Sell", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Messages", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
     <% if user_signed_in? %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning espacement-composants" %>
     <% else %>
-     <%= link_to "Sign-in", new_user_session_path, class: "btn btn-primary espacement-composants" %>
-     <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-success espacement-composants" %>
+     <%= link_to "Log in", new_user_session_path, class: "btn draw-border" %>
+     <%= link_to "Try", new_user_registration_path, class: "btn draw-border" %>
     <% end %>
 
     <% if user_signed_in? %>
@@ -32,7 +31,6 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Buy</a></li>
         <li><a href="#">Sell</a></li>
         <li><a href="#">Messages</a></li>
         <li><a href="#">Sign-in</a></li>
