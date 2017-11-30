@@ -183,6 +183,9 @@ array_user.each do |user|
   a = User.new(user)
   a.remote_profil_picture_url = user[:profil_picture]
   a.save
+  b = Basket.new
+  b.user = a
+  b.save
   users << a
 end
 
