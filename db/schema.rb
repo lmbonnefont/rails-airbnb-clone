@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130141553) do
+ActiveRecord::Schema.define(version: 20171130212106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20171130141553) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "content"
     t.bigint "user_id"
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "content"
     t.index ["product_id"], name: "index_messages_on_product_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 20171130141553) do
     t.bigint "basket_id"
     t.index ["basket_id"], name: "index_products_on_basket_id"
     t.index ["user_id"], name: "index_products_on_user_id"
+  end
+
+  create_table "reponses", force: :cascade do |t|
+    t.bigint "message_id"
+    t.bigint "user_id"
+    t.text "texte"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["message_id"], name: "index_reponses_on_message_id"
+    t.index ["user_id"], name: "index_reponses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,4 +90,6 @@ ActiveRecord::Schema.define(version: 20171130141553) do
   add_foreign_key "messages", "users"
   add_foreign_key "products", "baskets"
   add_foreign_key "products", "users"
+  add_foreign_key "reponses", "messages"
+  add_foreign_key "reponses", "users"
 end

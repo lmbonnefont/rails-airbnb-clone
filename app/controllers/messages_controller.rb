@@ -3,6 +3,8 @@ class MessagesController < ApplicationController
     authorize @message = Message.new
     @message.user = current_user
     @message.product = Product.find(params[:product_id])
+    @message.save
+    redirect_to new_product_message_reponse_path(params[:product_id], @message)
   end
 
   def create
@@ -13,4 +15,9 @@ class MessagesController < ApplicationController
 
   def update
   end
+
+  def show
+    authorize @message = Message.find(params[:id])
+  end
+
 end

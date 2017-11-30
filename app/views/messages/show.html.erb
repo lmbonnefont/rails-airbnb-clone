@@ -1,0 +1,12 @@
+<% @message.reponses.each do |reponse| %>
+  <% if reponse.user == current_user %>
+    <p> <%= reponse.texte %> </p>
+  <% else %>
+    <p> <%= reponse.texte %> </p>
+  <% end %>
+<% end %>
+
+<%= simple_form_for @message, url: product_message_reponses_path(params[:product_id], params[:id]), method: :post do |f| %>
+<%= f.input :content %>
+<%= f.button :submit %>
+<% end %>
