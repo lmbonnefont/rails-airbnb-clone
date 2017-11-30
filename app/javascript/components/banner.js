@@ -8,4 +8,4 @@ function loadDynamicBannerText() {
   });
 }
 
-export { loadDynamicBannerText };
+export { loadDynamicBannerText};
