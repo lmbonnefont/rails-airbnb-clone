@@ -1,15 +1,23 @@
+  <div class="banner-product">
+  <h1># <%= @product.title %></h1>
+
+  </div>
 <div class="product-container">
-  <div class="left-blank">p</div>
 
   <% if @product.photo.present? %>
     <div class="product-image">
-      <%= cl_image_tag @product.photo, height: 229, width: 400, crop: :fill %>
+      <%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fit, class: "image-rad4" %>
     </div>
   <% end %>
 
+  <div class="product-description">
+    <h2>Description</h2>
+    <p><%= @product.description %></p>
+
+  </div>
   <div class="product-details">
     <div class="product-name">
-     <h2><%= @product.title %> </h2>
+     <h2>Faites une offre!</h2>
 
     </div>
     <div class="product-attributes">
@@ -28,13 +36,46 @@
 
   </div>
 </div>
-<div class="description-wrapper">
-  <div class="product-description">
-    <h2>Description</h2>
-    <p><%= @product.description %></p>
+<div class="vendor-wrapper">
+  <div class="vendor">
+  <%= cl_image_tag @product.user.profil_picture, height: 150, width: 150, gravity: :face, crop: :fill, radius: :max %>
+  <h3><%= @product.user.surname %></h3> failing with success
+  <p><%= @product.user.age%> years old</p>
+
+  </div>
+  <div class="vendor-description">
+  <h2>Read <%= @product.user.company_name %>'s story </h2>
+  <p><%= @product.user.failure_history %></p>
   </div>
 </div>
 
+<div class="sale-wrapper">
+  <h2>Discover <%= @product.user.company_name %>'s other great deals! </h2>
+  <div class="container">
+    <div class="row">
+    <% @product.user.products.each do |product| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card card-btn">
+          <div class="card-top">
+            <div class="card-category"><%= product.category %></div>
+            <%= cl_image_tag product.user.profil_picture, class: "card-user" %>
+            <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
+          </div>
+            <%= cl_image_tag(product.photo, height: 20, class: "card-image") %>
+          <div class="card-description">
+            <h2><%= product.title %> </h2>
+            <p><%= product.quick_description %></p>
+            <h3><%= product.price %> €</h3>
+          </div>
+          <div class="card-bottom">
+            <p>Product added by <%= product.user.surname %></p>
+          </div>
+          <%= link_to "", product_path(product) , class: "card-link" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>
 
 
 
