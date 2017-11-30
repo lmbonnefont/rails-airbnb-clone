@@ -1,5 +1,5 @@
 class BasketsController < ApplicationController
-  skip_before_action :authenticate_user!
   def show
+    authorize Basket.new
   end
 end
