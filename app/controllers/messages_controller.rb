@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
   def new
-    @message = Message.new
+    authorize @message = Message.new
     @message.user = current_user
-    @message.product = params[:product_id]
+    @message.product = Product.find(params[:product_id])
   end
 
   def create
