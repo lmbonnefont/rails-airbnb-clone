@@ -3,16 +3,42 @@ body {
   font-size: 12px;
 }
 
+.banner-product {
+  color: white;
+  text-align: left;
+  height: 15vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: #fc7763;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+
+.banner-product h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 0px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
 .product-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100px;
+  margin: 50px 15px 0px 15px;
+
 
 }
 
-.left-blank {
-  flex: 0 0 35%;
+.product-description {
+  flex: 0 0 40%;
+  text-align: justify;
+  padding: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 300px;
 
 }
 
@@ -25,7 +51,6 @@ body {
 
 .product-details {
   flex: 0 0 400px;
-  margin: 0px 50px;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   padding: 10px 30px;
@@ -63,21 +88,31 @@ body {
 
 }
 
-.description-wrapper {
+.vendor-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 50px 0px
+  margin: 50px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
 }
 
-.product-description {
-  flex: 0 0 75%;
+.vendor-description {
+  flex: 0 0 80%;
   // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   text-align: justify;
-  padding: 15px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 30px;
 
+}
+
+.vendor-description h2 {
+  font-size: 24px;
+
+}
+
+.vendor {
+  flex: 0 0 15%;
+  text-align: center;
 
 }
 
@@ -91,4 +126,16 @@ body {
 
 .image-rad4 {
   border-radius: 4px;
+}
+
+.sale-wrapper {
+  margin: 50px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-shadow : center;
+
+}
+.sale-wrapper h2{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
 }

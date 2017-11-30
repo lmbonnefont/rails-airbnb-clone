@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_one :basket, dependent: :destroy
   mount_uploader :profil_picture, PhotoUploader
 end
