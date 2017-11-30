@@ -138,6 +138,9 @@ array_user.each do |user|
   a = User.new(user)
   a.remote_profil_picture_url = user[:profil_picture]
   a.save
+  b = Basket.new
+  b.user = a
+  b.save
   users << a
 end
 
@@ -145,5 +148,5 @@ array_item.each do |item|
   b = Product.new(item)
   b.remote_photo_url = item[:photo]
   b.user = users.sample
-  b.save
+  b.save!
 end
