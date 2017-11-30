@@ -1,5 +1,4 @@
-import "bootstrap"
-import { loadDynamicBannerText } from '../components/banner';
+import "bootstrap";
 
 import { autocomplete } from '../components/autocomplete';
 autocomplete();

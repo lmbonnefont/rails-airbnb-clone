@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20171130141553) do
     t.index ["user_id"], name: "index_baskets_on_user_id"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_messages_on_product_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.integer "price"
     t.text "description"
@@ -36,6 +46,8 @@ ActiveRecord::Schema.define(version: 20171130141553) do
     t.string "category"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "basket_id"
+    t.index ["basket_id"], name: "index_products_on_basket_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
@@ -64,5 +76,8 @@ ActiveRecord::Schema.define(version: 20171130141553) do
   end
 
   add_foreign_key "baskets", "users"
+  add_foreign_key "messages", "products"
+  add_foreign_key "messages", "users"
+  add_foreign_key "products", "baskets"
   add_foreign_key "products", "users"
 end
