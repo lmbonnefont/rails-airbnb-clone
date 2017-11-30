@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20171130141553) do
     t.float "latitude"
     t.float "longitude"
     t.bigint "basket_id"
-    t.index ["basket_id"], name: "index_products_on_basket_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 

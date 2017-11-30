@@ -195,5 +195,3 @@ array_item.each do |item|
   c.user = users.sample
   c.save
 end
-
-b.product = c

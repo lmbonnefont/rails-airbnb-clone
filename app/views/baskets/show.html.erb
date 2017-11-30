@@ -1,3 +1,13 @@
-<h1>Baskets#show</h1>
-<p>Find me in app/views/baskets/show.html.erb</p>
+<h1>Basket</h1>
+
+<ul>
+  <% prod = Product.find_by_id(14) %>
+  <% bas = @user.basket %>
+  <% prod.basket = bas %>
+  <% @products.each do |product| %>
+    <%= product.title if product.basket == @user.basket %>
+  <% end %>
+  <li></li>
+  <li></li>
+</ul>
 
