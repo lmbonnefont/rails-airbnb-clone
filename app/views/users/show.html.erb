@@ -1,35 +1,78 @@
-<h1><em>Your Profile</em></h1>
-<div class="text-center infos-profil">
-  <ul>
-    <li>Name: <% if @user.name == "" %>
+
+
+<div class="navbar-minimalist">
+  <img src="images/logo.png">
+</div>
+
+<div class="container">
+  <div class="profile text-center">
+    <div class="main">
+      <div class="main-content">
+        <%= image_tag "logo.jpg", alt: "Happy Failer logo", class: "avatar-xlarge"%>
+        <h2> <% if @user.name == "" %>
           We still don't know your name pretty face ... Update your profile !
          <% else %>
            <%= @user.name %>
-         <% end %></li>
-
-        <li>Surname: <% if @user.surname == "" %>
+         <% end %>
+        </h2>
+        <p>Surname: <% if @user.surname == "" %>
           We still don't know your surname pretty face ... Update your profile !
          <% else %>
            <%= @user.surname %>
-         <% end %></li>
-
-        <li>E-mail: <%= @user.email %> <%=  %></li>
-
-        <li>Age: <% if @user.age == "" %>
+         <% end %>
+        </p>
+        <p>
+          E-mail: <%= @user.email %> <%=  %>
+        </p>
+        <p>
+          Age: <% if @user.age == "" %>
           Tell-us how old you are ;)
          <% else %>
            <%= @user.age %>
-         <% end %></li>
+         <% end %>
+        </p>
+        <%= link_to "Sell", new_product_path, class: "btn-colored" %>
+        <div class="link-top">
+          <%= link_to 'Destroy my account', user_path, method: :delete, data: { confirm: "Are you sure?" }%>
+        </div>
+        <div class="link-top">
+          <%= link_to 'Update my account', edit_user_path(@user) %>
+        </div>
 
-        <li>Company name: <% if @user.company_name == "" %>
-          Which company did you fail ?
-         <% else %>
-           <%= @user.company_name %>
-         <% end %></li>
-
-  </ul>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-content">
+        <h3>0</h3>
+        <p>product</p>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-content">
+        <h3>758</h3>
+        <p>offers</p>
+      </div>
+      </div>
+    <div class="stat">
+      <div class="stat-content">
+        <h3>19000 $</h3>
+        <p>total offers</p>
+      </div>
+      </div>
+    <div class="description">
+      <div class="description-content">
+        <h3>More details about your failed company :<span class="highlight"><%= @user.company_name %></span>
+         </h3>
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates nobis soluta, sed sapiente sit voluptas nam corporis fugit voluptatum inventore expedita explicabo consectetur doloribus quibusdam unde quaerat odio ab hic!
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= link_to 'Destroy my account', user_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
 
-<%= link_to 'Update my account', edit_user_path(@user), class: "btn btn-danger btn-sm" %>
+
+
+
+
