@@ -3,6 +3,10 @@ class BasketPolicy < ApplicationPolicy
     user.present?
   end
 
+  def pay?
+    user.present?
+  end
+
   class Scope < Scope
     def resolve
       scope
