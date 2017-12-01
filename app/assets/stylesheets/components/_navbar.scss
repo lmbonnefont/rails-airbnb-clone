@@ -226,19 +226,25 @@
 
 .contenant-messages {
   position: relative;
+
   margin-bottom: 20px;
+
 }
 
 .nbmessage {
   color: white;
+
   font-weight: bold;
+
   position: relative;
   top:12px;
   right: 12px;
   border-radius: 50%;
   background-color: #fa7867;
+
   width: 18px;
   height: 18px;
+
   margin: 0 auto;
   display: flex;
   flex-direction: column;

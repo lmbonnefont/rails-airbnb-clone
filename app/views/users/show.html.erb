@@ -8,7 +8,7 @@
   <div class="profile text-center">
     <div class="main">
       <div class="main-content">
-        <%= image_tag "logo.jpg", alt: "Happy Failer logo", class: "avatar-xlarge"%>
+        <%=link_to cl_image_tag(current_user.profil_picture, height: 80, width: 80, gravity: :face, crop: :fill, radius: :max ), user_path(current_user) %>
         <h2> <% if @user.name == "" %>
           We still don't know your name pretty face ... Update your profile !
          <% else %>
