@@ -4,11 +4,10 @@ class ReponsesController < ApplicationController
   end
 
   def create
+    authorize @reponse = Reponse.new()
     if params[:message]
-      authorize @reponse = Reponse.new()
       @reponse.texte = message_params[:content]
     else
-      authorize @reponse = Reponse.new()
       @reponse.texte = reponse_params[:texte]
     end
     @reponse.user = current_user
@@ -24,6 +23,7 @@ class ReponsesController < ApplicationController
     @reponse.save
     redirect_to product_message_path(params[:product_id], @reponse.message)
   end
+
 
   private
 

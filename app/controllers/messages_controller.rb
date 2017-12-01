@@ -12,7 +12,13 @@ class MessagesController < ApplicationController
   end
 
   def index
-    authorize @messages = Message.where("user = ?", params[:user_id])
+    # @messages = policy_scope(Message).where("user_id = ?", current_user)
+    @messagesasbuyer = policy_scope(Message).where("user_id = ?", current_user)
+    myproducts = policy_scope(Product).where("user_id = ?", current_user)
+    @myproductswithmessages =  myproducts.select {|p| p.message != nil}
+    # @messages = []
+    # @messages << messagereceived
+    # @messages << messagesinitiated
   end
 
 end
