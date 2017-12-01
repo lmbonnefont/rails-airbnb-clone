@@ -11,17 +11,15 @@
 
 
     <% if user_signed_in? %>
-
-
-      <%= link_to "Sell new product", new_product_path, class: "btn draw-border-red" %>
-
-    <% end %>
-
-    <% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn draw-border" %>
-      <%= link_to  " Hi " + current_user.surname, user_path(current_user), class: "spacing" %>
-      <%=link_to cl_image_tag(current_user.profil_picture,
-      class: "avatar spacing"), user_path(current_user) %>
+        <%= link_to "Sell new product", new_product_path, class: "btn draw-border-red" %>
+        <div class="contenant-messages">
+        <%= link_to user_messages_path(current_user) do %>
+          <div class="nbmessage text-center"> <%= current_user.new_message %> </div>
+          <i class="fa fa-envelope-o fa-2x spacing" aria-hidden="true"></i>
+        <% end %>
+        <%= link_to  " Hi " + current_user.surname, user_path(current_user), class: "spacing" %>
+        <%=link_to cl_image_tag(current_user.profil_picture, class: "avatar spacing"), user_path(current_user) %>
+        </div>
     <% else %>
      <%= link_to "Log in", new_user_session_path, class: "btn draw-border" %>
      <%= link_to "Try", new_user_registration_path, class: "btn draw-border" %>
