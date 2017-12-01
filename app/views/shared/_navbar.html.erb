@@ -16,7 +16,7 @@
         <%= link_to "sell", new_product_path, class: "spacing" %>
         <div class="contenant-messages">
         <%= link_to user_messages_path(current_user) do %>
-          <div class="nbmessage"> <%= current_user.new_message %> </div>
+          <div class="nbmessage text-center"> <%= current_user.new_message %> </div>
           <i class="fa fa-envelope-o fa-2x spacing" aria-hidden="true"></i>
         <% end %>
         </div>

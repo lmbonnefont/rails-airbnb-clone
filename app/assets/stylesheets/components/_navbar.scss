@@ -220,5 +220,18 @@
 
 .contenant-messages {
   position: relative;
+  margin-bottom: 19px;
+}
+
+.nbmessage {
+  color: black;
+  font-weight: bold;
+  position: relative;
+  top:15px;
+  right: 15px;
+  border-radius: 50%;
+  background-color: #fa7867;
+  width: 20px;
+  margin: 0 auto;
 }
 
