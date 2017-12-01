@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, only: [ :show, :edit, :update, :destroy] do
-    resources :baskets, only: [ :show ]
     resources :messages, only: [:index]
+  end
+  resources :baskets, only: [ :show, :update ] do
+    get "pay", on: :member
   end
   resources :products, only: [ :new, :create , :index, :show, :edit, :update, :destroy ] do
     resources :messages, only: [:new, :show] do

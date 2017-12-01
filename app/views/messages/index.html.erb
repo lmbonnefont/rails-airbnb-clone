@@ -4,18 +4,19 @@
 <% @messagesasbuyer.each do |message| %>
     <div class="contenant-list-message">
 
-      <%= cl_image_tag(message.user.profil_picture, class: "avatar-large") %>
+      <%= cl_image_tag(message.product.user.profil_picture, class: "avatar-large") %>
       <div class="message-name">
-        <h3><%= message.user.surname %></h3>
+        <h3><%= message.product.user.surname %></h3>
         <p>01/12/17</p>
       </div>
 
       <div class="message-body">
-        <p><strong> <%= link_to "Nouveau message", product_message_path(message.product ,message)  %></strong></p>
+        <p><strong> <%= link_to message.product.title, product_message_path(message.product ,message)  %></strong></p>
         <p>
           <%= message.reponses.last.texte%>
         </p>
       </div>
+      <div class="nb-messages-conv text-center"><%= message.new_message_buyer %></div>
     </div>
 <% end %>
 
@@ -31,11 +32,12 @@
       </div>
 
       <div class="message-body">
-        <p><strong> <%= link_to "Nouveau message", product_message_path(product ,product.message)  %></strong></p>
+        <p><strong> <%= link_to product.title, product_message_path(product ,product.message)  %></strong></p>
         <p>
           <%= product.message.reponses.last.texte%>
         </p>
       </div>
+      <div class="nb-messages-conv text-center"><%= product.message.new_message_seller %></div>
     </div>
 <% end %>
 </div>

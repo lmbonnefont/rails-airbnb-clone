@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = policy_scope(Product).order(created_at: :desc)
+    @products = Product.where(availability: true)
   end
 
   def show
@@ -18,8 +19,6 @@ class ProductsController < ApplicationController
         lng: @user.longitude#,
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }]
-
-
   end
 
   def new

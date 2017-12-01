@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130225102) do
+ActiveRecord::Schema.define(version: 20171201135158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20171130225102) do
     t.datetime "updated_at", null: false
     t.text "content"
     t.integer "new_message", default: 0
+    t.integer "new_message_seller", default: 0
+    t.integer "new_message_buyer", default: 0
     t.index ["product_id"], name: "index_messages_on_product_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
@@ -45,7 +47,6 @@ ActiveRecord::Schema.define(version: 20171130225102) do
     t.string "title"
     t.string "category"
     t.bigint "basket_id"
-    t.index ["basket_id"], name: "index_products_on_basket_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
