@@ -1,10 +1,10 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
-    var productAddress = document.getElementById('product_address');
-    console.log(productAddress)
-    if (productAddress) {
-      var autocomplete = new google.maps.places.Autocomplete(productAddress, { types: [ 'geocode' ] });
-      google.maps.event.addDomListener(productAddress, 'keydown', function(e) {
+    var userAddress = document.getElementById('user_address');
+    console.log(userAddress)
+    if (userAddress) {
+      var autocomplete = new google.maps.places.Autocomplete(userAddress, { types: [ 'geocode' ] });
+      google.maps.event.addDomListener(userAddress, 'keydown', function(e) {
         if (e.key === "Enter") {
           e.preventDefault(); // Do not submit the form on Enter.
         }
@@ -14,4 +14,3 @@ function autocomplete() {
 }
 
 export { autocomplete };
-export { autocomplete2 };
