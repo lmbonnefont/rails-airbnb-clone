@@ -1,0 +1,41 @@
+<div class="contenant">
+<h3>Your offers</h3>
+
+<% @messagesasbuyer.each do |message| %>
+    <div class="contenant-list-message">
+
+      <%= cl_image_tag(message.user.profil_picture, class: "avatar-large") %>
+      <div class="message-name">
+        <h3><%= message.user.surname %></h3>
+        <p>01/12/17</p>
+      </div>
+
+      <div class="message-body">
+        <p><strong> <%= link_to "Nouveau message", product_message_path(message.product ,message)  %></strong></p>
+        <p>
+          <%= message.reponses.last.texte%>
+        </p>
+      </div>
+    </div>
+<% end %>
+
+<h3>Your products Messages</h3>
+
+<% @myproductswithmessages.each do |product| %>
+<div class="contenant-list-message">
+
+      <%= cl_image_tag(product.message.user.profil_picture, class: "avatar-large") %>
+      <div class="message-name">
+        <h3><%= product.message.user.surname %></h3>
+        <p>01/12/17</p>
+      </div>
+
+      <div class="message-body">
+        <p><strong> <%= link_to "Nouveau message", product_message_path(product ,product.message)  %></strong></p>
+        <p>
+          <%= product.message.reponses.last.texte%>
+        </p>
+      </div>
+    </div>
+<% end %>
+</div>

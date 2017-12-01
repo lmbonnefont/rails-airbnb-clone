@@ -11,6 +11,15 @@ class ProductsController < ApplicationController
   def show
     authorize @product
     @product = Product.find(params[:id])
+    @user = @product.user
+
+    @marker = [{
+        lat: @user.latitude,
+        lng: @user.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }]
+
+
   end
 
   def new
@@ -56,6 +65,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :quick_description, :price, :description, :address, :photo)
+    params.require(:product).permit(:title, :quick_description, :price, :description, :photo)
   end
 end

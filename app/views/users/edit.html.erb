@@ -1,26 +1,32 @@
-<div class="backgroud-img" style="background-image: url(<%= asset_path "edit-profile-background.jpg" %>);">
+<% @skip_footer = true %>
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div class="form-new">
-          <h2>Edit your profile</h2>
-          <%= simple_form_for @user, url: user_path(@user), method: :patch  do |f| %>
-            <%= f.hidden_field :path, :value => @path  %>
-            <%= f.input :email %>
-            <%= f.input :surname %>
-            <%= f.input :name %>
-            <%= f.input :age %>
-            <%= f.input :company_name %>
-            <%= f.input :failure_history %>
-            <%= f.input :profil_picture %>
-            <%= f.input :profil_picture_cache, as: :hidden %>
-            <%= f.submit "Edit profile", class: "btn btn-primary" %>
-          <% end %>
-      </div>
+
+    <div class="col-md-6 col-md-offset-3 form-sign">
+      <h2 class= "text-center">Edit your profil</h2>
+
+        <%= simple_form_for @user, url: user_path(@user), method: :patch  do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.hidden_field :path, :value => @path  %>
+           <%= f.input :email %>
+           <%= f.input :surname %>
+           <%= f.input :name %>
+           <%= f.input :age %>
+           <%= f.input :company_name %>
+           <%= f.input :failure_history %>
+           <%= f.input :profil_picture %>
+           <%= f.input :profil_picture_cache, as: :hidden %>
+        </div>
+
+        <div class="form-actions text-center">
+          <%= f.button :submit, "Edit profil", :class => 'btn-white btn-colored' %>
+        </div>
+      <% end %>
+
     </div>
   </div>
-</div>
-
 </div>
 
