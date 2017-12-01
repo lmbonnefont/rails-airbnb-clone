@@ -27,9 +27,7 @@
         ],  class: "avatar spacing"), user_path(current_user) %>
         <%= link_to "Checkout", destroy_user_session_path, method: :delete, class: "btn draw-border-red" %> |
 
-       
-      
-       
+
 
     <% else %>
      <%= link_to "Log in", new_user_session_path, class: "btn draw-border" %>
