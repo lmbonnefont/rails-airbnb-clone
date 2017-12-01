@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="pay-content text-center">
+        <h2>Congrats !</h2>
+        <h3>You just transformed a total failure into a failure</h3>
+
+        <p>
+          <em>Thanks to you, some failed entrepreneurs will eat tonight.</em>
+          <% @basket_products.each do |product| %>
+            <% product.availability == false %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
