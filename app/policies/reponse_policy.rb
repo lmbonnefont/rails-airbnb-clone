@@ -1,16 +1,12 @@
-class MessagePolicy < ApplicationPolicy
+class ReponsePolicy < ApplicationPolicy
 
   def new?
     user.present?
   end
 
-  def show?
+  def create?
     user.present?
   end
-
-  # def index?
-  #   user.present?
-  # end
 
   class Scope < Scope
     def resolve

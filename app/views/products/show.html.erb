@@ -34,8 +34,10 @@
      <h2>Faites une offre!</h2>
 
     </div>
+
     <div class="product-attributes text-center">
-      <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @product.address %></p>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @product.user.address %></p>
+
       <p>Availability: <%= @product.availability ? "Ok" : "Nope" %></p>
 
     </div>
@@ -45,6 +47,9 @@
     </div>
     <div class="add_to_basket">
       <a href="#" class="btn btn-success">Add to basket</a>
+
+      <%= link_to "Contact the seller", new_product_message_path(@product), class: "btn btn-success" %>
+
     </div>
   </div>
 </div>
@@ -90,4 +95,10 @@
     </div>
 </div>
 
+<div
+  id="map"
+  style="width: 100%;
+  height: 500px;"
+  data-markers="<%= @marker.to_json %>"
+></div>
 
