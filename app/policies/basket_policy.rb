@@ -3,6 +3,10 @@ class BasketPolicy < ApplicationPolicy
     user.present?
   end
 
+  def update?
+    true
+  end
+
   def pay?
     user.present?
   end
