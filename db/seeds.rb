@@ -9,10 +9,10 @@ Product.destroy_all
     password: "123456",
     email: "jeanb@gmail.com",
     age: 23,
-    address: "12 rue de Tocqueville",
+    address: "12 Rue de Tocqueville, 75017 Paris",
     profil_picture: "http://images.wisegeek.com/nerdy-man-in-checkered-shirt-with-computer.jpg",
-    company_name: "Thalasso de Paris",
-    failure_history: "En vrai j'ai merdé grave ... Franchement je ne mérite que l'opprobe public",
+    company_name: "Enron",
+    failure_history: "Le géant américain, créé en 1931 et renommé Enron en 1985, fut l’une des entreprises américaines avec la plus grosse capitalisation boursière. Cette société texane était spécialiste dans le gaz naturel et avait créé tout un système de courtage par lequel elle achetait et revendait de l’électricité. Et pourtant, ce géant de l’énergie américain n’existe plus aujourd’hui. En 2001, l’entreprise fut frappée par un scandale lorsque ses escroqueries ont été dévoilées. La faillite de l’entreprise s’explique par le fait qu’elle démontrait une croissance exceptionnelle de ses ventes tout en dissimulant l’explosion considérable de sa dette. Le 2 décembre 2001, l’entreprise annonce officiellement sa faillite et la perte de 65,6 milliards de dollars d’actifs ainsi que la dissolution de son auditeur Arthur Anderson, cinquième plus grande entreprise d’audit financier et comptable au monde.",
   }
 
 
@@ -20,7 +20,7 @@ Product.destroy_all
     title: "MacBook pourri",
     quick_description: "Plus de clavier, écran sympa",
     price: 12,
-    description: "Vieille edition de 2014, quand on croyait qu'on allait lever",
+    description: "VPour tester la situation et le terrain : j'ai déjà demandé à une autre amie d'appeler son assureur en lui disant que c'est elle qui a cassé mon MacBook, celui-ci lui a dit que « le propriétaire de la machine (moi) doit envoyer une lettre mentionnant les frais de dédommagement (pour l'assureur) et que ensuite ...",
     availability: true,
     photo: "http://img.macg.co/2009/06/macbook-air-bus-20091127-203134.jpg",
   }
@@ -30,7 +30,7 @@ Product.destroy_all
     title: "Lot de 102 imprimantes 3D",
     quick_description: "N'imprime que sur des feuilles A4",
     price: 110,
-    description: "La base du business initialement prévu. J'en ai acheté 3 containers.",
+    description: "L'association Halte à l'Obsolescence Programmée (HOP) met en cause plusieurs marques, dont Canon, HP ou Epson, qu'elle accuse de «raccourcir délibérément la durée de vie des imprimantes et des cartouches». Les fabricants rétorquent qu'au contraire, ils travaillent depuis longtemps sur la durabilité de leurs produits. Il s'agit d'une première en France, se félicite Halte à l'Obsolescence Programmée (HOP). L'association née en 2015 et spécialisée dans la lutte contre l'obsolescence programmée - une technique imputée aux fabricants pour réduire volontairement la durée de vie d'un produit et inciter le consommateur à acheter davantage - a déposé lundi une plainte auprès du Procureur de la République de Nanterre à l'encontre de plusieurs grandes marques d'imprimantes.",
     availability: true,
     photo: "http://annonces-gratuites.index-net.org/images/90402_16345az5NaYaQxoO.jpg",
   }
@@ -40,7 +40,7 @@ Product.destroy_all
     title: "Scooter de livraison",
     quick_description: "Roule, freiner avec les pieds",
     price: 159,
-    description: "A une odeur permanente de fumier",
+    description: "Dans le cadre d’un usage professionnel amenant à utiliser quotidiennement un scooter, de surcroît sur des longues distances, il faut convenablement peser le pour et le contre avant de l’acheter. Ainsi, les coursiers, livreurs de pizzas ou autres, seront amenés à se poser des questions essentielles, notamment sur les pannes connues, parfois récurrentes, qui surviennent sur certains modèles. Pour limiter ces risques, internet et les forums constituent une bonne source de vérification, comme la plupart des garagistes, non affiliés à une marque bien entendu.",
     availability: true,
     photo: "http://www.lapizz-foix.com/medias/album/images/scooter-livraison.jpg",
   }
@@ -49,7 +49,7 @@ Product.destroy_all
     title: "Canapé de burau (ou pas)",
     quick_description: "Canapé chill",
     price: 110,
-    description: "Canapé idéal pour chiller au boulot avec les reufs.",
+    description: "La gamme Millbrae met l’accent sur l'aspect social des espaces de travail nouvelle génération. Élégant, le piètement horizontal en acier constitue un support simple et moderne qui s’associe parfaitement avec l’effet matelassé piquet. Avec ses coussins fermes, et son design alligné, la collection Millbrae Contract peut être intégrée à des halls d’entrée ou salons, ou peut être utilisée isolément. Cette collection, permet d'offrir un cadre de travail plus chaleureux. Lounge 1 place, sofa 2 ou 3 places. Avec ou sans accoudoirs (1 ou 2 accoudoirs au choix pour le siège lounge 1 place). Bancs tapissés 1, 2 ou 3 places. Piètement en nickel brossé ou noir brillant. Coussins support coordonnés disponibles.",
     availability: true,
     photo: "http://www.francecanape.com/images/canape/canape-design-maguelone/canape-design-maguelone-demo.jpg",
   }
@@ -63,10 +63,12 @@ Product.destroy_all
     password: "123456",
     email: "pierred@gmail.com",
     age: 25,
-    address: "10 rue de la Pompe",
+    address: "10 rue de la Pompe, 75016 Paris",
     profil_picture: "https://static1.jeanlouisdavid.com/articles/1/29/61/@/5411-homme-comment-entretenir-sa-barbe-article_full-2.jpg",
-    company_name: "DVD Land",
-    failure_history: "Rien à dire, je touche le fond mais creuse toujours. Besoin urgent de pépettes.",
+    company_name: "General Motors",
+    failure_history: "General Motors, entreprise créée en 1908 à Détroit et véritable mastodonte de l’industrie automobile américaine et mondiale contrôlait plus d’une quinzaine de marques automobiles en 2000. Avec un premier risque de faillite en 2005, la sentence tombe le 1er juin 2009, à la suite de la crise de l’automobile qui avait rendu impossible le remboursement des dettes accumulées.
+
+L’entreprise qui détenait 91 milliards de dollars est placée sous la couverture du Chapitre 11 de la constitution américaine afin de nationaliser l’entreprise et la sauver de la banqueroute totale. Cette intervention de l’État américain permet à General Motors de se sortir de la plus grosse faillite d’entreprise du secteur automobile.",
   }
 
 
@@ -74,7 +76,7 @@ Product.destroy_all
     title: "Super bureau",
     quick_description: "Classe, vrai bois aggloméré",
     price: 45,
-    description: "La moitié de mon capital y est passé, prenez en soin.",
+    description: "A la recherche d'un nouveau bureau tout beau pour votre coin travail ? Nous avons tout ce qu'il vous faut. Minimaliste ou classique, vintage ou scandinave, mural ou modulable : les bureaux ne cessent de se faire de plus en plus attractifs. Jetez un coup d’œil à notre sélection et craquez pour un modèle aussi esthétique que pratique.",
     availability: true,
     photo: "http://www.royaledeco.com/78877/bureau-design-en-bois-et-gris-laque-1-porte-5-tiroirs-waki.jpg",
   }
@@ -89,8 +91,8 @@ Product.destroy_all
     age: 25,
     address: "28 rue de rennes 75006 Paris",
     profil_picture: "https://archzine.fr/wp-content/uploads/2017/08/vetement-homme-inspiration-film-suits-homme-d-affaire-costume-cravate-bleu-fonce%CC%81.jpg",
-    company_name: "Vault, Tour & Associés",
-    failure_history: "Besoin de matos pour mes 15 stagiaires de l'été",
+    company_name: "WorldCom",
+    failure_history: "Les plus grandes faillites d’entreprises sont souvent entachées de grandes fraudes ou escroqueries. WorldCom est fondée en 1983 par le canadien Bernard Ebbers dans le Mississipi et est introduite en Bourse en 1989. Mais, dès 2000 et afin de surmonter les difficultés de l’industrie des télécoms, certains cadres de la compagnie ont effectué des manipulations comptables frauduleuses pour masquer des pertes de revenus. Avec des actifs de plus de 103 milliards de dollars, comme General Motors, l’entreprise est placée sous le Chapitre 11. La faillite de l’entreprise a conduit à un plan de restructuration en 2003 et à un changement de nom pour marquer le coup. WorldCom se prénomme donc désormais MCI.",
   }
 
   ########
@@ -101,10 +103,10 @@ Product.destroy_all
     password: "123456",
     email: "johnnyb@gmail.com",
     age: 35,
-    address: "8 rue de Rome Paris",
+    address: "8 rue de Rome, Paris",
     profil_picture: "http://resize2-parismatch.ladmedia.fr/r/625,417,center-middle,ffffff/img/var/news/storage/images/paris-match/people/repliquant-aux-rumeurs-johnny-hallyday-prend-la-route-du-studio-1376894/22861601-1-fre-FR/Repliquant-aux-rumeurs-Johnny-Hallyday-prend-la-route-du-studio.jpg",
-    company_name: "Optique 2000",
-    failure_history: "Qu'est-ce qu'elle a ma gueule ?",
+    company_name: "Lehman Brothers",
+    failure_history: "Le numéro un des grandes faillites d’entreprises est sans surprise l’effondrement de Lehman Brothers. La banque d’investissement créée en 1850 a fait énormément parlé d’elle lors de sa disparition le 15 septembre 2008. Sa faillite a d’ailleurs lancé, selon les spécialistes, la crise financière mondiale née de la crise des « subprimes ». Selon le principe du « Too Big To Fail », l’entreprise aurait pu être placée sous le Chapitre 11, mais le gouvernement américain ne l’a pas sauvée pour autant.",
   }
 
 
@@ -112,9 +114,9 @@ Product.destroy_all
     title: "Oculus Rift",
     quick_description: "Utilisé pour faire du Excel",
     price: 12,
-    description: "Il est beau il est chaud !",
+    description: "Avez-vous déjà entendu parlé des casques de réalité virtuelle ? L’Oculus rift, Le HTC Vive, le Galaxy Gear VR de Samsung et le Morpheus de Sony ? Aujourd’hui Detentation, le spécialiste de la location de Fauteuils de massage, chaise de massage et Table de massage et Lemondedelarealitevirtuelle.com vous propose la Location d’animation Oculus Rift, Casque de réalité virtuelle. Préparez vous, vous allez pouvoir voyagé dans l’espace temps, sans vous en rendre compte, grâce à un casque de réalité virtuelle : L’Oculus rift, Le HTC Vive, le Galaxy Gear VR de Samsung .",
     availability: true,
-    photo: "https://icdn5.digitaltrends.com/image/oculus-rift-on-matt-set-right-800x533-c.jpg?ver=1",
+    photo: "https://detentation-9ogin0n.netdna-ssl.com/wp-content/uploads/2014/12/oculus-rift-nouveau-detentation.jpg",
   }
 
 
@@ -122,7 +124,7 @@ Product.destroy_all
     title: "Téléphone Alcatel",
     quick_description: "Pour harceler vos clients",
     price: 110,
-    description: "Incassable, sert aussi de matraque.",
+    description: "Si l'an passé, tu avais acheté pour 1000 EURO d'actions NortelNetworks, tu aurais aujourd'hui encore 59 EURO. Si l'an passé, tu avais acheté pour 1000 EURO d'actions LucentTechnologies, tu aurais aujourd'hui encore 70 EURO. Si l'an passé, tu avais acheté pour 1000 EURO d'actions Alcatel,tu aurais aujourd'hui encore 170 EURO. Si l'an passé, tu avais acheté pour 1000 EURO de caisses de Kro,tu aurais tout bu et aujourd'hui, il te resterait 380 EURO de consignes.",
     availability: true,
     photo: "http://www.ave.fr/photos/485/B234301.JPG",
   }

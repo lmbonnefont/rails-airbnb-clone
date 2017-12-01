@@ -5,5 +5,6 @@ class PagesController < ApplicationController
 
   def home
     @products = policy_scope(Product).order(created_at: :desc)
+    @products = Product.where(availability: true)
   end
 end

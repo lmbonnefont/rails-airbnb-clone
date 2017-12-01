@@ -5,7 +5,7 @@
 
         <% tot = 0 %>
         <% @products.each do |product| %>
-          <% if product.basket == @user.basket %>
+          <% if product.basket == @user.basket && product.availability == true %>
             <div class="basket-item">
                 <div class="basket-content">
                 <div class="basket-item-title">
@@ -25,17 +25,21 @@
         <div class="basket-item">
           <div class="basket-content">
             <div class="basket-item-title bottom">
-              These failures total cost is
+              <%= tot > 0 ? "These failures total cost is" : "Your basket is empty" %>
             </div>
           </div>
-          <div class="basket-price total">
-            $<%= tot %>
+          <% if tot > 0 %>
+            <div class="basket-price total">
+              $<%= tot %>
+            </div>
+          <% end %>
+        </div>
+        <% if tot > 0 %>
+          <div class="basket-btn">
+            <%= link_to "Fund failers!", pay_basket_path, class: "btn btn-success" %>
+            <%= link_to "Go back", :back %>
           </div>
-        </div>
-        <div class="basket-btn">
-          <%= link_to "Fund failers!", pay_basket_path, class: "btn btn-success" %>
-          <%= link_to "Go back", :back %>
-        </div>
+        <% end %>
     </div>
   </div>
 </div>
