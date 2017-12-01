@@ -14,4 +14,3 @@ function autocomplete() {
 }
 
 export { autocomplete };
-export { autocomplete2 };

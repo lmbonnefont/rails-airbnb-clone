@@ -5,4 +5,10 @@ class BasketsController < ApplicationController
     authorize @user
     authorize @products
   end
+
+  def update
+    @product = Product.find(params[:product])
+    @product.basket = current_user.basket
+    @product.save
+  end
 end

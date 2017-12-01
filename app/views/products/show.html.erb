@@ -30,8 +30,7 @@
 
     </div>
     <div class="add_to_basket">
-      <a href="#" class="btn btn-success">Add to basket</a>
-
+      <%= link_to "add to basket", basket_path(current_user.basket, product: @product), method: :patch, class: "btn btn-success" %>
     </div>
 
   </div>
