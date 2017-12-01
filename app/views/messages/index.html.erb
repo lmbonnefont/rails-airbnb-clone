@@ -4,7 +4,10 @@
 <% @messagesasbuyer.each do |message| %>
     <div class="contenant-list-message">
 
-      <%= cl_image_tag(message.product.user.profil_picture, class: "avatar-large") %>
+      <%= cl_image_tag(message.product.user.profil_picture, :transformation=>[
+        {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
+        {:width=>200, :crop=>"scale"}
+        ], class: "avatar-large") %>
       <div class="message-name">
         <h3><%= message.product.user.surname %></h3>
         <p>01/12/17</p>
@@ -25,7 +28,10 @@
 <% @myproductswithmessages.each do |product| %>
 <div class="contenant-list-message">
 
-      <%= cl_image_tag(product.message.user.profil_picture, class: "avatar-large") %>
+      <%= cl_image_tag(product.message.user.profil_picture, :transformation=>[
+        {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
+        {:width=>200, :crop=>"scale"}
+        ], class: "avatar-large") %>
       <div class="message-name">
         <h3><%= product.message.user.surname %></h3>
         <p>01/12/17</p>
