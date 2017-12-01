@@ -1,4 +1,4 @@
-
+<% @skip_footer = true %>
 
 <div class="navbar-minimalist">
   <img src="images/logo.png">
@@ -34,8 +34,7 @@
         <%= link_to "Sell", new_product_path, class: "btn-colored" %>
         <div class="link-top">
           <%= link_to 'Destroy my account', user_path, method: :delete, data: { confirm: "Are you sure?" }%>
-        </div>
-        <div class="link-top">
+          <br>
           <%= link_to 'Update my account', edit_user_path(@user) %>
         </div>
 
@@ -43,8 +42,9 @@
     </div>
     <div class="stat">
       <div class="stat-content">
-        <h3>0</h3>
-        <p>product</p>
+
+        <h3>52</h3>
+        <p><%= link_to "products", products_path %></p>
       </div>
     </div>
     <div class="stat">
