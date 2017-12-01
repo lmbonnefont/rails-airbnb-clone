@@ -53,23 +53,9 @@
     </div>
   </div>
 </div>
-<div class="vendor-wrapper">
-  <div class="vendor">
-  <%= cl_image_tag @product.user.profil_picture, height: 150, width: 150, gravity: :face, crop: :fill, radius: :max %>
-  <h3><%= @product.user.surname %></h3> failing with success
-  <p><%= @product.user.age%> years old</p>
-
-  </div>
-  <div class="vendor-description">
-  <h1><span class="highlight ">Who's saling this product?</span></h1>
-  <h2>Read <%= @product.user.company_name %>'s story </h2>
-  <p><%= @product.user.failure_history %></p>
-  </div>
-</div>
-
 <div class="sale-wrapper">
-  <h2>Discover <%= @product.user.company_name %>'s other great deals! </h2>
   <div class="container">
+  <h1><span class="highlight">Discover <%= @product.user.company_name %>'s other great deals!</span></h1>
     <div class="row">
     <% @product.user.products.each do |product| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
@@ -94,11 +80,25 @@
       <% end %>
     </div>
 </div>
+<div class="vendor-wrapper">
+  <div class="vendor">
+  <%= cl_image_tag @product.user.profil_picture, height: 150, width: 150, gravity: :face, crop: :fill, radius: :max %>
+  <h3><%= @product.user.surname %></h3> failing with success
+  <p><%= @product.user.age%> years old</p>
 
+  </div>
+  <div class="vendor-description">
+  <h1><span class="highlight ">Who's saling this product?</span></h1>
+  <h2>Read <%= @product.user.company_name %>'s story </h2>
+  <p><%= @product.user.failure_history %></p>
+  </div>
+</div>
 <div
   id="map"
   style="width: 100%;
   height: 500px;"
   data-markers="<%= @marker.to_json %>"
 ></div>
+
+
 
