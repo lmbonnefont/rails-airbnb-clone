@@ -19,9 +19,18 @@
           <i class="fa fa-envelope-o spacing" aria-hidden="true"></i>
         <% end %> |
         </div>
+
         <%= link_to "", basket_path(current_user.basket), class: "fa fa-shopping-basket " %> |
-        <%=link_to cl_image_tag(current_user.profil_picture, class: "avatar spacing"), user_path(current_user) %> |
+        <%=link_to cl_image_tag(current_user.profil_picture, :transformation=>[
+        {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
+        {:width=>200, :crop=>"scale"}
+        ],  class: "avatar spacing"), user_path(current_user) %>
         <%= link_to "Checkout", destroy_user_session_path, method: :delete, class: "btn draw-border-red" %> |
+
+       
+      
+       
+
     <% else %>
      <%= link_to "Log in", new_user_session_path, class: "btn draw-border" %>
      <%= link_to "Try", new_user_registration_path, class: "btn draw-border" %>
