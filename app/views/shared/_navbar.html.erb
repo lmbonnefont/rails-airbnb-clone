@@ -25,7 +25,13 @@
      <%= link_to "Try", new_user_registration_path, class: "btn draw-border" %>
     <% end %>
 
-
+    <% if user_signed_in? %>
+      <%= link_to "sell", new_product_path %>
+      <%= link_to "", basket_path(current_user.basket), class: "fa fa-shopping-basket fa-2x" %>
+      <%=link_to cl_image_tag(current_user.profil_picture,
+      class: "avatar spacing"), user_path(current_user) %>
+      <%= link_to  " Hi " + current_user.surname, user_path(current_user), class: "spacing" %>
+    <% end %>
 
   </div>
 
