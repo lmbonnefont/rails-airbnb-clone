@@ -46,7 +46,9 @@
 
     </div>
     <div class="add_to_basket">
+
       <%= link_to "Add to basket", basket_path(current_user.basket, product: @product), method: :patch, class: "btn btn-colored-mini " %>
+
     </div>
       <%= link_to "Contact the seller", new_product_message_path(@product), class: "btn btn-colored-mini" %>
 
