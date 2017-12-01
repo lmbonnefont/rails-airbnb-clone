@@ -1,8 +1,16 @@
+.contenant-mess {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 50px;
+}
+
 .contenant-list-message {
   display: flex;
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
 }
 .message:last-child {
   border-bottom: none;
