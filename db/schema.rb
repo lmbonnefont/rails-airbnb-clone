@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20171201135158) do
     t.string "title"
     t.string "category"
     t.bigint "basket_id"
-    t.index ["basket_id"], name: "index_products_on_basket_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 

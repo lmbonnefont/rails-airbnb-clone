@@ -1,0 +1,40 @@
+.basket-item {
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: lightgray;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basket-item-title {
+ color: gray;
+ font-weight: bold;
+}
+
+.basket-item-desc {
+  color: gray;
+}
+
+.basket-price {
+  color: gray;
+}
+
+.total {
+  color: #3AB0D2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bottom {
+  color: #3AB0D2;
+  font-size: 16px;
+}
+
+.basket-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
