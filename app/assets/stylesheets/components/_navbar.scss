@@ -183,6 +183,12 @@
 
 .draw-border {
   @include btn-border-drawing(#58afd1, #ffe593, 2px, bottom, right);
+  border: 8px solid transparent;
+}
+
+.draw-border-red {
+  @include btn-border-drawing(#fa7867, #ffe593, 2px, bottom, right);
+  border: 8px solid transparent;
 }
 
 //=== Button styling, semi-ignore
