@@ -8,7 +8,8 @@
         <p>
           <em>Thanks to you, some failed entrepreneurs will eat tonight.</em>
           <% @basket_products.each do |product| %>
-            <% product.availability == false %>
+            <% product.availability = false %>
+            <% product.save %>
           <% end %>
         </p>
       </div>
