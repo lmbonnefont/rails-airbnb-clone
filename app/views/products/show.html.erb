@@ -46,7 +46,7 @@
 
     </div>
     <div class="add_to_basket">
-      <%= link_to "add to basket", basket_path(current_user.basket, product: @product), method: :patch, class: "btn btn-success" %>
+      <%= link_to "add to basket", basket_path(current_user.basket, product: @product), method: :patch, class: "btn btn-success margin-bouton" %>
     </div>
       <%= link_to "Contact the seller", new_product_message_path(@product), class: "btn btn-success" %>
 
