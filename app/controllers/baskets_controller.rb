@@ -10,5 +10,6 @@ class BasketsController < ApplicationController
     @product = Product.find(params[:product])
     @product.basket = current_user.basket
     @product.save
+    authorize @product
   end
 end
