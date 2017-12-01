@@ -46,8 +46,8 @@ class ProductsController < ApplicationController
   end
 
   def update
-    authorize @product
     @product.update(product_params)
+    skip_authorization
     redirect_to product_path(@product)
   end
 

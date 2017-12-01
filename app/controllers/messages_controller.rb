@@ -9,6 +9,14 @@ class MessagesController < ApplicationController
 
   def show
     authorize @message = Message.find(params[:id])
+    current_user.new_message = 0
+    current_user.save
+    if current_user == @message.product.user
+      @message.new_message_seller = 0
+    else
+      @message.new_message_buyer = 0
+    end
+    @message.save
   end
 
   def index
