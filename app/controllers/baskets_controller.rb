@@ -12,4 +12,13 @@ class BasketsController < ApplicationController
     @product.save
     authorize @product
   end
+
+  def pay
+    @basket = Basket.find(params[:id])
+    @basket_products = Product.where(basket: @basket)
+    @user = current_user
+    authorize @basket
+    authorize @basket_products
+    authorize @user
+  end
 end
