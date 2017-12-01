@@ -1,3 +1,5 @@
+<% @skip_footer = true %>
+
 <div class="container">
   <div class="contenant">
     <div class="messages">
@@ -11,9 +13,9 @@
     </div>
 
     <%= simple_form_for @message, url: product_message_reponses_path(params[:product_id], params[:id]), method: :post do |f| %>
-    <%= f.input :content, placeholder: "Type your message here"%>
-    <div class="contenant-btn">
-      <%= f.button :submit, value: "Send" %>
+    <%= f.input :content, :label => "Your last conversation", placeholder: "Type your message here"%>
+      <div class="form-actions text-center">
+          <%= f.button :submit, "Send", :class => 'btn-white btn-colored' %>
     </div>
     <% end %>
   </div>
