@@ -65,6 +65,25 @@
     }
 }
 
+.btn-colored-mini {
+    display: inline-block;
+    background: #5CAFCF;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 4px;
+    box-shadow: 0px 17px 10px -10px rgba(128, 136, 151,0.1);
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+    margin-top: 30px;
+
+
+    &:hover {
+      box-shadow: 0px 37px 20px -20px rgba(128, 136, 151,0.1);
+      transform: translate(0px, -5px) scale(1.02);
+    }
+}
+
 // over surligne
 
 @import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
