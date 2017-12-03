@@ -7,5 +7,5 @@ class Product < ApplicationRecord
   validates :description, presence: true
 
   mount_uploader :photo, PhotoUploader
-  has_one :message
+  has_one :message, dependent: :destroy
 end

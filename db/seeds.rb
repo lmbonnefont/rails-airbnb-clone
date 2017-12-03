@@ -1,5 +1,6 @@
 require 'faker'
 
+Message.destroy_all
 User.destroy_all
 Product.destroy_all
 
